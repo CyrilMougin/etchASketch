@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+    
+}
+
+.colorBlock {
+    height: 100px;
+    width: 100px;
+ 
+    border: 1px solid black;
+}

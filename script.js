@@ -1,15 +1,11 @@
-gridContainer = document.createElement('div');
-gridContainer.classList.add('container')
-document.body.appendChild(gridContainer);
+gridContainer = document.querySelector('.container');
 
 document.querySelector('#gridSizeButton').addEventListener("click", function() {
     setGridSize(window.prompt());
 });
 
 
-
-
-function setGridSize(value) {
+let setGridSize = function(value) {
     removeAllChildNodes(gridContainer);
     for (i=0;i<value*value;i++) {
         tmp = document.createElement('div');

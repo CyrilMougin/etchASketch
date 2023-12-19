@@ -1,5 +1,8 @@
-gridContainer = document.querySelector('.container');
+window.onload = function() {
+    setGridSize(16);
+}
 
+gridContainer = document.querySelector('.container');
 document.querySelector('#gridSizeButton').addEventListener("click", function() {
     setGridSize(window.prompt());
 });

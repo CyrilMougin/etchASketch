@@ -4,8 +4,28 @@
     box-sizing: border-box;
 }
 
+
 body {
-    background-color: grey;
+    background-color: rgb(195,189,189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 45px;
+    text-align: center;
+}
+
+.mainContainer {
+    padding-top: 20vh;
+    display: flex;
+    gap: 10vh;
+}
+
+#gridSizeButton {
+    height: 5rem;
+    width: 10rem;
 }
 
 .container {

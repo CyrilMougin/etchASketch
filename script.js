@@ -7,6 +7,8 @@ document.querySelector('#gridSizeButton').addEventListener("click", function() {
 });
 
 
+
+
 function setGridSize(value) {
     removeAllChildNodes(gridContainer);
     for (i=0;i<value*value;i++) {
@@ -15,10 +17,16 @@ function setGridSize(value) {
         blockSize = 400 / value + 'px';
         tmp.style.height = blockSize;
         tmp.style.width = blockSize;
-        tmp.addEventListener("mouseover", (e) => e.currentTarget.style.backgroundColor = 'lightpink' )
-        gridContainer.appendChild(tmp);
+ 
+            tmp.addEventListener("mouseover", (e) => e.currentTarget.style.setProperty("background-color", randomColor()));
+            gridContainer.appendChild(tmp);
     }
 }
+
+
+function randomColor() {
+    return 'rgb('+ Math.floor(Math.random() * 255)+','+ Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255)+')' ;
+  }
 
 
 function removeAllChildNodes(parent) {
